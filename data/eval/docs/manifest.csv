@@ -1,0 +1,121 @@
+path,label,variant,detail
+inv_000_genuine.pdf,0,genuine_pdf,
+inv_000_genuine_scan.jpg,0,genuine_scan,
+inv_000_T1_cover_and_retype.pdf,1,T1_cover_and_retype,"{'field': 'Grand Total', 'original': 31978.0, 'tampered': 57100.0}"
+inv_001_genuine.pdf,0,genuine_pdf,
+inv_001_genuine_scan.jpg,0,genuine_scan,
+inv_001_T2_redact_clean.pdf,1,T2_redact_clean,"{'field': 'Grand Total', 'original': 12154.0, 'tampered': 18800.0}"
+inv_002_genuine.pdf,0,genuine_pdf,
+inv_002_genuine_scan.jpg,0,genuine_scan,
+inv_002_T3_inflate_item.pdf,1,T3_inflate_item,"{'field': 'Fender Replacement', 'original': 5750.0, 'tampered': 14300.0}"
+inv_003_genuine.pdf,0,genuine_pdf,
+inv_003_genuine_scan.jpg,0,genuine_scan,
+inv_003_T4_image_paste.jpg,1,T4_image_paste,"{'field': 'Grand Total', 'original': 32627.0, 'tampered': 45900.0}"
+inv_004_genuine.pdf,0,genuine_pdf,
+inv_004_genuine_scan.jpg,0,genuine_scan,
+inv_004_T5_metadata_edit.pdf,1,T5_metadata_edit,"{'field': 'metadata', 'original': '', 'tampered': 're-saved by editor'}"
+inv_005_genuine.pdf,0,genuine_pdf,
+inv_005_genuine_scan.jpg,0,genuine_scan,
+inv_005_T1_cover_and_retype.pdf,1,T1_cover_and_retype,"{'field': 'Grand Total', 'original': 47259.0, 'tampered': 93300.0}"
+inv_006_genuine.pdf,0,genuine_pdf,
+inv_006_genuine_scan.jpg,0,genuine_scan,
+inv_006_T2_redact_clean.pdf,1,T2_redact_clean,"{'field': 'Grand Total', 'original': 27022.0, 'tampered': 45500.0}"
+inv_007_genuine.pdf,0,genuine_pdf,
+inv_007_genuine_scan.jpg,0,genuine_scan,
+inv_007_T3_inflate_item.pdf,1,T3_inflate_item,"{'field': 'Windshield Glass', 'original': 8900.0, 'tampered': 18900.0}"
+inv_008_genuine.pdf,0,genuine_pdf,
+inv_008_genuine_scan.jpg,0,genuine_scan,
+inv_008_T4_image_paste.jpg,1,T4_image_paste,"{'field': 'Grand Total', 'original': 19824.0, 'tampered': 33400.0}"
+inv_009_genuine.pdf,0,genuine_pdf,
+inv_009_genuine_scan.jpg,0,genuine_scan,
+inv_009_T5_metadata_edit.pdf,1,T5_metadata_edit,"{'field': 'metadata', 'original': '', 'tampered': 're-saved by editor'}"
+inv_010_genuine.pdf,0,genuine_pdf,
+inv_010_genuine_scan.jpg,0,genuine_scan,
+inv_010_T1_cover_and_retype.pdf,1,T1_cover_and_retype,"{'field': 'Grand Total', 'original': 47554.0, 'tampered': 80800.0}"
+inv_011_genuine.pdf,0,genuine_pdf,
+inv_011_genuine_scan.jpg,0,genuine_scan,
+inv_011_T2_redact_clean.pdf,1,T2_redact_clean,"{'field': 'Grand Total', 'original': 22833.0, 'tampered': 30900.0}"
+inv_012_genuine.pdf,0,genuine_pdf,
+inv_012_genuine_scan.jpg,0,genuine_scan,
+inv_012_T3_inflate_item.pdf,1,T3_inflate_item,"{'field': 'Side Mirror Assembly', 'original': 9000.0, 'tampered': 16500.0}"
+inv_013_genuine.pdf,0,genuine_pdf,
+inv_013_genuine_scan.jpg,0,genuine_scan,
+inv_013_T4_image_paste.jpg,1,T4_image_paste,"{'field': 'Grand Total', 'original': 13806.0, 'tampered': 20600.0}"
+inv_014_genuine.pdf,0,genuine_pdf,
+inv_014_genuine_scan.jpg,0,genuine_scan,
+inv_014_T5_metadata_edit.pdf,1,T5_metadata_edit,"{'field': 'metadata', 'original': '', 'tampered': 're-saved by editor'}"
+inv_015_genuine.pdf,0,genuine_pdf,
+inv_015_genuine_scan.jpg,0,genuine_scan,
+inv_015_T1_cover_and_retype.pdf,1,T1_cover_and_retype,"{'field': 'Grand Total', 'original': 20414.0, 'tampered': 44600.0}"
+inv_016_genuine.pdf,0,genuine_pdf,
+inv_016_genuine_scan.jpg,0,genuine_scan,
+inv_016_T2_redact_clean.pdf,1,T2_redact_clean,"{'field': 'Grand Total', 'original': 42126.0, 'tampered': 50600.0}"
+inv_017_genuine.pdf,0,genuine_pdf,
+inv_017_genuine_scan.jpg,0,genuine_scan,
+inv_017_T3_inflate_item.pdf,1,T3_inflate_item,"{'field': 'Windshield Glass', 'original': 7700.0, 'tampered': 13700.0}"
+inv_018_genuine.pdf,0,genuine_pdf,
+inv_018_genuine_scan.jpg,0,genuine_scan,
+inv_018_T4_image_paste.jpg,1,T4_image_paste,"{'field': 'Grand Total', 'original': 56522.0, 'tampered': 105500.0}"
+inv_019_genuine.pdf,0,genuine_pdf,
+inv_019_genuine_scan.jpg,0,genuine_scan,
+inv_019_T5_metadata_edit.pdf,1,T5_metadata_edit,"{'field': 'metadata', 'original': '', 'tampered': 're-saved by editor'}"
+inv_020_genuine.pdf,0,genuine_pdf,
+inv_020_genuine_scan.jpg,0,genuine_scan,
+inv_020_T1_cover_and_retype.pdf,1,T1_cover_and_retype,"{'field': 'Grand Total', 'original': 23364.0, 'tampered': 38500.0}"
+inv_021_genuine.pdf,0,genuine_pdf,
+inv_021_genuine_scan.jpg,0,genuine_scan,
+inv_021_T2_redact_clean.pdf,1,T2_redact_clean,"{'field': 'Grand Total', 'original': 59059.0, 'tampered': 96100.0}"
+inv_022_genuine.pdf,0,genuine_pdf,
+inv_022_genuine_scan.jpg,0,genuine_scan,
+inv_022_T3_inflate_item.pdf,1,T3_inflate_item,"{'field': 'Rear Bumper Repair', 'original': 8300.0, 'tampered': 17000.0}"
+inv_023_genuine.pdf,0,genuine_pdf,
+inv_023_genuine_scan.jpg,0,genuine_scan,
+inv_023_T4_image_paste.jpg,1,T4_image_paste,"{'field': 'Grand Total', 'original': 29146.0, 'tampered': 40700.0}"
+inv_024_genuine.pdf,0,genuine_pdf,
+inv_024_genuine_scan.jpg,0,genuine_scan,
+inv_024_T5_metadata_edit.pdf,1,T5_metadata_edit,"{'field': 'metadata', 'original': '', 'tampered': 're-saved by editor'}"
+inv_025_genuine.pdf,0,genuine_pdf,
+inv_025_genuine_scan.jpg,0,genuine_scan,
+inv_025_T1_cover_and_retype.pdf,1,T1_cover_and_retype,"{'field': 'Grand Total', 'original': 68676.0, 'tampered': 137600.0}"
+inv_026_genuine.pdf,0,genuine_pdf,
+inv_026_genuine_scan.jpg,0,genuine_scan,
+inv_026_T2_redact_clean.pdf,1,T2_redact_clean,"{'field': 'Grand Total', 'original': 16107.0, 'tampered': 29000.0}"
+inv_027_genuine.pdf,0,genuine_pdf,
+inv_027_genuine_scan.jpg,0,genuine_scan,
+inv_027_T3_inflate_item.pdf,1,T3_inflate_item,"{'field': 'Fender Replacement', 'original': 12800.0, 'tampered': 28400.0}"
+inv_028_genuine.pdf,0,genuine_pdf,
+inv_028_genuine_scan.jpg,0,genuine_scan,
+inv_028_T4_image_paste.jpg,1,T4_image_paste,"{'field': 'Grand Total', 'original': 46610.0, 'tampered': 92400.0}"
+inv_029_genuine.pdf,0,genuine_pdf,
+inv_029_genuine_scan.jpg,0,genuine_scan,
+inv_029_T5_metadata_edit.pdf,1,T5_metadata_edit,"{'field': 'metadata', 'original': '', 'tampered': 're-saved by editor'}"
+inv_030_genuine.pdf,0,genuine_pdf,
+inv_030_genuine_scan.jpg,0,genuine_scan,
+inv_030_T1_cover_and_retype.pdf,1,T1_cover_and_retype,"{'field': 'Grand Total', 'original': 29323.0, 'tampered': 39800.0}"
+inv_031_genuine.pdf,0,genuine_pdf,
+inv_031_genuine_scan.jpg,0,genuine_scan,
+inv_031_T2_redact_clean.pdf,1,T2_redact_clean,"{'field': 'Grand Total', 'original': 26432.0, 'tampered': 44200.0}"
+inv_032_genuine.pdf,0,genuine_pdf,
+inv_032_genuine_scan.jpg,0,genuine_scan,
+inv_032_T3_inflate_item.pdf,1,T3_inflate_item,"{'field': 'Door Panel Denting', 'original': 9800.0, 'tampered': 16700.0}"
+inv_033_genuine.pdf,0,genuine_pdf,
+inv_033_genuine_scan.jpg,0,genuine_scan,
+inv_033_T4_image_paste.jpg,1,T4_image_paste,"{'field': 'Grand Total', 'original': 30503.0, 'tampered': 50900.0}"
+inv_034_genuine.pdf,0,genuine_pdf,
+inv_034_genuine_scan.jpg,0,genuine_scan,
+inv_034_T5_metadata_edit.pdf,1,T5_metadata_edit,"{'field': 'metadata', 'original': '', 'tampered': 're-saved by editor'}"
+inv_035_genuine.pdf,0,genuine_pdf,
+inv_035_genuine_scan.jpg,0,genuine_scan,
+inv_035_T1_cover_and_retype.pdf,1,T1_cover_and_retype,"{'field': 'Grand Total', 'original': 28438.0, 'tampered': 39300.0}"
+inv_036_genuine.pdf,0,genuine_pdf,
+inv_036_genuine_scan.jpg,0,genuine_scan,
+inv_036_T2_redact_clean.pdf,1,T2_redact_clean,"{'field': 'Grand Total', 'original': 32450.0, 'tampered': 54000.0}"
+inv_037_genuine.pdf,0,genuine_pdf,
+inv_037_genuine_scan.jpg,0,genuine_scan,
+inv_037_T3_inflate_item.pdf,1,T3_inflate_item,"{'field': 'Headlamp Assembly (LH)', 'original': 9500.0, 'tampered': 22200.0}"
+inv_038_genuine.pdf,0,genuine_pdf,
+inv_038_genuine_scan.jpg,0,genuine_scan,
+inv_038_T4_image_paste.jpg,1,T4_image_paste,"{'field': 'Grand Total', 'original': 28025.0, 'tampered': 38700.0}"
+inv_039_genuine.pdf,0,genuine_pdf,
+inv_039_genuine_scan.jpg,0,genuine_scan,
+inv_039_T5_metadata_edit.pdf,1,T5_metadata_edit,"{'field': 'metadata', 'original': '', 'tampered': 're-saved by editor'}"

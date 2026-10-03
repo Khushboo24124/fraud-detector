@@ -1,0 +1,121 @@
+codes,file,generator,label,ms,overall,risk,set,tier,variant
+,inv_000_genuine.pdf,,0,59662,0.1219,0.1219,document,LOW,genuine_pdf
+DOC-IMG-01,inv_000_genuine_scan.jpg,,0,8561,0.2232,0.2232,document,LOW,genuine_scan
+DOC-FONT-01 DOC-META-03 DOC-OVL-01 DOC-OVL-02,inv_000_T1_cover_and_retype.pdf,,1,60,0.9737,0.9737,document,HIGH,T1_cover_and_retype
+,inv_001_genuine.pdf,,0,31,0.1219,0.1219,document,LOW,genuine_pdf
+DOC-IMG-01,inv_001_genuine_scan.jpg,,0,6045,0.2539,0.2539,document,LOW,genuine_scan
+DOC-MATH-01 DOC-OVL-01,inv_001_T2_redact_clean.pdf,,1,61,0.7064,0.7064,document,HIGH,T2_redact_clean
+,inv_002_genuine.pdf,,0,33,0.1219,0.1219,document,LOW,genuine_pdf
+DOC-IMG-01,inv_002_genuine_scan.jpg,,0,5816,0.2243,0.2243,document,LOW,genuine_scan
+DOC-FONT-01 DOC-MATH-01 DOC-OVL-01,inv_002_T3_inflate_item.pdf,,1,61,0.9059,0.9059,document,HIGH,T3_inflate_item
+,inv_003_genuine.pdf,,0,40,0.1219,0.1219,document,LOW,genuine_pdf
+DOC-IMG-01,inv_003_genuine_scan.jpg,,0,4859,0.2357,0.2357,document,LOW,genuine_scan
+DOC-IMG-01 DOC-MATH-01,inv_003_T4_image_paste.jpg,,1,4469,0.7658,0.7658,document,HIGH,T4_image_paste
+,inv_004_genuine.pdf,,0,32,0.1219,0.1219,document,LOW,genuine_pdf
+DOC-IMG-01,inv_004_genuine_scan.jpg,,0,5659,0.2625,0.2625,document,LOW,genuine_scan
+DOC-META-01 DOC-META-03,inv_004_T5_metadata_edit.pdf,,1,64,0.3303,0.3303,document,LOW,T5_metadata_edit
+,inv_005_genuine.pdf,,0,34,0.1219,0.1219,document,LOW,genuine_pdf
+DOC-IMG-01,inv_005_genuine_scan.jpg,,0,6089,0.2386,0.2386,document,LOW,genuine_scan
+DOC-FONT-01 DOC-META-03 DOC-OVL-01 DOC-OVL-02,inv_005_T1_cover_and_retype.pdf,,1,61,0.9737,0.9737,document,HIGH,T1_cover_and_retype
+,inv_006_genuine.pdf,,0,30,0.1219,0.1219,document,LOW,genuine_pdf
+DOC-IMG-01,inv_006_genuine_scan.jpg,,0,5172,0.2527,0.2527,document,LOW,genuine_scan
+DOC-MATH-01 DOC-OVL-01,inv_006_T2_redact_clean.pdf,,1,58,0.7064,0.7064,document,HIGH,T2_redact_clean
+,inv_007_genuine.pdf,,0,33,0.1219,0.1219,document,LOW,genuine_pdf
+DOC-IMG-01,inv_007_genuine_scan.jpg,,0,5886,0.2204,0.2204,document,LOW,genuine_scan
+DOC-FONT-01 DOC-MATH-01 DOC-OVL-01,inv_007_T3_inflate_item.pdf,,1,61,0.9059,0.9059,document,HIGH,T3_inflate_item
+,inv_008_genuine.pdf,,0,32,0.1219,0.1219,document,LOW,genuine_pdf
+DOC-IMG-01,inv_008_genuine_scan.jpg,,0,5469,0.2246,0.2246,document,LOW,genuine_scan
+DOC-IMG-01 DOC-MATH-01,inv_008_T4_image_paste.jpg,,1,4423,0.759,0.759,document,HIGH,T4_image_paste
+,inv_009_genuine.pdf,,0,33,0.1219,0.1219,document,LOW,genuine_pdf
+DOC-IMG-01,inv_009_genuine_scan.jpg,,0,5980,0.2066,0.2066,document,LOW,genuine_scan
+DOC-META-01 DOC-META-03,inv_009_T5_metadata_edit.pdf,,1,58,0.3303,0.3303,document,LOW,T5_metadata_edit
+,inv_010_genuine.pdf,,0,35,0.1219,0.1219,document,LOW,genuine_pdf
+DOC-IMG-01,inv_010_genuine_scan.jpg,,0,6292,0.2573,0.2573,document,LOW,genuine_scan
+DOC-FONT-01 DOC-META-03 DOC-OVL-01 DOC-OVL-02,inv_010_T1_cover_and_retype.pdf,,1,63,0.9737,0.9737,document,HIGH,T1_cover_and_retype
+,inv_011_genuine.pdf,,0,40,0.1219,0.1219,document,LOW,genuine_pdf
+DOC-IMG-01,inv_011_genuine_scan.jpg,,0,4416,0.2148,0.2148,document,LOW,genuine_scan
+DOC-MATH-01 DOC-OVL-01,inv_011_T2_redact_clean.pdf,,1,65,0.7064,0.7064,document,HIGH,T2_redact_clean
+,inv_012_genuine.pdf,,0,30,0.1219,0.1219,document,LOW,genuine_pdf
+DOC-IMG-01,inv_012_genuine_scan.jpg,,0,4569,0.2587,0.2587,document,LOW,genuine_scan
+DOC-FONT-01 DOC-MATH-01 DOC-OVL-01,inv_012_T3_inflate_item.pdf,,1,59,0.9059,0.9059,document,HIGH,T3_inflate_item
+,inv_013_genuine.pdf,,0,30,0.1219,0.1219,document,LOW,genuine_pdf
+DOC-IMG-01,inv_013_genuine_scan.jpg,,0,4730,0.2166,0.2166,document,LOW,genuine_scan
+DOC-IMG-01 DOC-MATH-01,inv_013_T4_image_paste.jpg,,1,4972,0.7327,0.7327,document,HIGH,T4_image_paste
+,inv_014_genuine.pdf,,0,39,0.1219,0.1219,document,LOW,genuine_pdf
+DOC-IMG-01,inv_014_genuine_scan.jpg,,0,6345,0.2,0.2,document,LOW,genuine_scan
+DOC-META-01 DOC-META-03,inv_014_T5_metadata_edit.pdf,,1,55,0.3303,0.3303,document,LOW,T5_metadata_edit
+,inv_015_genuine.pdf,,0,34,0.1219,0.1219,document,LOW,genuine_pdf
+DOC-IMG-01,inv_015_genuine_scan.jpg,,0,4819,0.2169,0.2169,document,LOW,genuine_scan
+DOC-FONT-01 DOC-META-03 DOC-OVL-01 DOC-OVL-02,inv_015_T1_cover_and_retype.pdf,,1,58,0.9737,0.9737,document,HIGH,T1_cover_and_retype
+,inv_016_genuine.pdf,,0,31,0.1219,0.1219,document,LOW,genuine_pdf
+DOC-IMG-01,inv_016_genuine_scan.jpg,,0,4568,0.2515,0.2515,document,LOW,genuine_scan
+DOC-MATH-01 DOC-OVL-01,inv_016_T2_redact_clean.pdf,,1,55,0.7064,0.7064,document,HIGH,T2_redact_clean
+,inv_017_genuine.pdf,,0,36,0.1219,0.1219,document,LOW,genuine_pdf
+DOC-IMG-01,inv_017_genuine_scan.jpg,,0,6310,0.2623,0.2623,document,LOW,genuine_scan
+DOC-FONT-01 DOC-MATH-01 DOC-OVL-01,inv_017_T3_inflate_item.pdf,,1,71,0.9059,0.9059,document,HIGH,T3_inflate_item
+,inv_018_genuine.pdf,,0,41,0.1219,0.1219,document,LOW,genuine_pdf
+DOC-IMG-01,inv_018_genuine_scan.jpg,,0,5946,0.2432,0.2432,document,LOW,genuine_scan
+DOC-IMG-01 DOC-MATH-01,inv_018_T4_image_paste.jpg,,1,4522,0.7626,0.7626,document,HIGH,T4_image_paste
+,inv_019_genuine.pdf,,0,33,0.1219,0.1219,document,LOW,genuine_pdf
+DOC-IMG-01,inv_019_genuine_scan.jpg,,0,4813,0.2339,0.2339,document,LOW,genuine_scan
+DOC-META-01 DOC-META-03,inv_019_T5_metadata_edit.pdf,,1,64,0.3303,0.3303,document,LOW,T5_metadata_edit
+,inv_020_genuine.pdf,,0,31,0.1219,0.1219,document,LOW,genuine_pdf
+DOC-IMG-01,inv_020_genuine_scan.jpg,,0,5088,0.2124,0.2124,document,LOW,genuine_scan
+DOC-FONT-01 DOC-META-03 DOC-OVL-01 DOC-OVL-02,inv_020_T1_cover_and_retype.pdf,,1,62,0.9737,0.9737,document,HIGH,T1_cover_and_retype
+,inv_021_genuine.pdf,,0,35,0.1219,0.1219,document,LOW,genuine_pdf
+DOC-IMG-01,inv_021_genuine_scan.jpg,,0,5665,0.2543,0.2543,document,LOW,genuine_scan
+DOC-MATH-01 DOC-OVL-01,inv_021_T2_redact_clean.pdf,,1,64,0.7064,0.7064,document,HIGH,T2_redact_clean
+,inv_022_genuine.pdf,,0,31,0.1219,0.1219,document,LOW,genuine_pdf
+DOC-IMG-01,inv_022_genuine_scan.jpg,,0,4363,0.2323,0.2323,document,LOW,genuine_scan
+DOC-FONT-01 DOC-MATH-01 DOC-OVL-01,inv_022_T3_inflate_item.pdf,,1,56,0.9059,0.9059,document,HIGH,T3_inflate_item
+,inv_023_genuine.pdf,,0,33,0.1219,0.1219,document,LOW,genuine_pdf
+DOC-IMG-01,inv_023_genuine_scan.jpg,,0,5624,0.2234,0.2234,document,LOW,genuine_scan
+DOC-IMG-01 DOC-MATH-01,inv_023_T4_image_paste.jpg,,1,4449,0.7476,0.7476,document,HIGH,T4_image_paste
+,inv_024_genuine.pdf,,0,35,0.1219,0.1219,document,LOW,genuine_pdf
+DOC-IMG-01,inv_024_genuine_scan.jpg,,0,5747,0.2237,0.2237,document,LOW,genuine_scan
+DOC-META-01 DOC-META-03,inv_024_T5_metadata_edit.pdf,,1,57,0.3303,0.3303,document,LOW,T5_metadata_edit
+,inv_025_genuine.pdf,,0,35,0.1219,0.1219,document,LOW,genuine_pdf
+DOC-IMG-01,inv_025_genuine_scan.jpg,,0,5774,0.2477,0.2477,document,LOW,genuine_scan
+DOC-FONT-01 DOC-META-03 DOC-OVL-01 DOC-OVL-02,inv_025_T1_cover_and_retype.pdf,,1,58,0.9737,0.9737,document,HIGH,T1_cover_and_retype
+,inv_026_genuine.pdf,,0,31,0.1219,0.1219,document,LOW,genuine_pdf
+DOC-FONT-02 DOC-IMG-01,inv_026_genuine_scan.jpg,,0,5041,0.4112,0.4112,document,MEDIUM,genuine_scan
+DOC-MATH-01 DOC-OVL-01,inv_026_T2_redact_clean.pdf,,1,60,0.7064,0.7064,document,HIGH,T2_redact_clean
+,inv_027_genuine.pdf,,0,31,0.1219,0.1219,document,LOW,genuine_pdf
+DOC-IMG-01,inv_027_genuine_scan.jpg,,0,4242,0.2282,0.2282,document,LOW,genuine_scan
+DOC-FONT-01 DOC-MATH-01 DOC-OVL-01,inv_027_T3_inflate_item.pdf,,1,62,0.9059,0.9059,document,HIGH,T3_inflate_item
+,inv_028_genuine.pdf,,0,35,0.1219,0.1219,document,LOW,genuine_pdf
+DOC-IMG-01,inv_028_genuine_scan.jpg,,0,5209,0.2358,0.2358,document,LOW,genuine_scan
+DOC-IMG-01 DOC-MATH-01,inv_028_T4_image_paste.jpg,,1,4775,0.7618,0.7618,document,HIGH,T4_image_paste
+,inv_029_genuine.pdf,,0,38,0.1219,0.1219,document,LOW,genuine_pdf
+DOC-IMG-01,inv_029_genuine_scan.jpg,,0,6236,0.1996,0.1996,document,LOW,genuine_scan
+DOC-META-01 DOC-META-03,inv_029_T5_metadata_edit.pdf,,1,52,0.3303,0.3303,document,LOW,T5_metadata_edit
+,inv_030_genuine.pdf,,0,39,0.1219,0.1219,document,LOW,genuine_pdf
+DOC-IMG-01,inv_030_genuine_scan.jpg,,0,5047,0.2329,0.2329,document,LOW,genuine_scan
+DOC-FONT-01 DOC-META-03 DOC-OVL-01 DOC-OVL-02,inv_030_T1_cover_and_retype.pdf,,1,65,0.9737,0.9737,document,HIGH,T1_cover_and_retype
+,inv_031_genuine.pdf,,0,30,0.1219,0.1219,document,LOW,genuine_pdf
+DOC-IMG-01,inv_031_genuine_scan.jpg,,0,4870,0.249,0.249,document,LOW,genuine_scan
+DOC-MATH-01 DOC-OVL-01,inv_031_T2_redact_clean.pdf,,1,68,0.7064,0.7064,document,HIGH,T2_redact_clean
+,inv_032_genuine.pdf,,0,33,0.1219,0.1219,document,LOW,genuine_pdf
+DOC-IMG-01,inv_032_genuine_scan.jpg,,0,4848,0.254,0.254,document,LOW,genuine_scan
+DOC-FONT-01 DOC-MATH-01 DOC-OVL-01,inv_032_T3_inflate_item.pdf,,1,68,0.9059,0.9059,document,HIGH,T3_inflate_item
+,inv_033_genuine.pdf,,0,36,0.1219,0.1219,document,LOW,genuine_pdf
+DOC-IMG-01,inv_033_genuine_scan.jpg,,0,5379,0.2287,0.2287,document,LOW,genuine_scan
+DOC-IMG-01 DOC-MATH-01,inv_033_T4_image_paste.jpg,,1,4856,0.777,0.777,document,HIGH,T4_image_paste
+,inv_034_genuine.pdf,,0,43,0.1219,0.1219,document,LOW,genuine_pdf
+DOC-IMG-01,inv_034_genuine_scan.jpg,,0,6203,0.2467,0.2467,document,LOW,genuine_scan
+DOC-META-01 DOC-META-03,inv_034_T5_metadata_edit.pdf,,1,75,0.3303,0.3303,document,LOW,T5_metadata_edit
+,inv_035_genuine.pdf,,0,33,0.1219,0.1219,document,LOW,genuine_pdf
+DOC-IMG-01,inv_035_genuine_scan.jpg,,0,5545,0.231,0.231,document,LOW,genuine_scan
+DOC-FONT-01 DOC-META-03 DOC-OVL-01 DOC-OVL-02,inv_035_T1_cover_and_retype.pdf,,1,68,0.9737,0.9737,document,HIGH,T1_cover_and_retype
+,inv_036_genuine.pdf,,0,62,0.1219,0.1219,document,LOW,genuine_pdf
+DOC-IMG-01,inv_036_genuine_scan.jpg,,0,5851,0.2147,0.2147,document,LOW,genuine_scan
+DOC-MATH-01 DOC-OVL-01,inv_036_T2_redact_clean.pdf,,1,78,0.7064,0.7064,document,HIGH,T2_redact_clean
+,inv_037_genuine.pdf,,0,29,0.1219,0.1219,document,LOW,genuine_pdf
+DOC-FONT-02 DOC-IMG-01,inv_037_genuine_scan.jpg,,0,5905,0.417,0.417,document,MEDIUM,genuine_scan
+DOC-FONT-01 DOC-MATH-01 DOC-OVL-01,inv_037_T3_inflate_item.pdf,,1,65,0.9059,0.9059,document,HIGH,T3_inflate_item
+,inv_038_genuine.pdf,,0,34,0.1219,0.1219,document,LOW,genuine_pdf
+DOC-IMG-01,inv_038_genuine_scan.jpg,,0,5463,0.2362,0.2362,document,LOW,genuine_scan
+DOC-IMG-01 DOC-MATH-01,inv_038_T4_image_paste.jpg,,1,5507,0.7666,0.7666,document,HIGH,T4_image_paste
+,inv_039_genuine.pdf,,0,40,0.1219,0.1219,document,LOW,genuine_pdf
+DOC-IMG-01,inv_039_genuine_scan.jpg,,0,5354,0.226,0.226,document,LOW,genuine_scan
+DOC-META-01 DOC-META-03,inv_039_T5_metadata_edit.pdf,,1,62,0.3303,0.3303,document,LOW,T5_metadata_edit

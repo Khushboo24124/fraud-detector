@@ -1,0 +1,19 @@
+# Python 3.11 recommended. CPU torch: pip install torch --index-url https://download.pytorch.org/whl/cpu
+torch>=2.4
+transformers>=5.4      # CommunityForensics needs >=5.4 for shortest_edge resize (no squashing)
+safetensors
+huggingface_hub
+streamlit>=1.40
+plotly
+opencv-python>=4.10    # includes FaceDetectorYN / FaceRecognizerSF
+pymupdf>=1.24
+rapidocr-onnxruntime   # OCR with no system binary (Tesseract-free)
+onnxruntime
+imagehash
+reportlab
+scikit-learn
+pillow
+numpy
+pyyaml
+pandas
+pytest

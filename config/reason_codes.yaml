@@ -1,0 +1,143 @@
+# Reason-code catalogue. Every flag shown to an investigator comes from here.
+# {placeholders} are filled from the signal's evidence dict.
+
+IMG-AI-01:
+  group: ai_detector
+  title: Likely AI-generated image
+  template: "Calibrated ensemble rates this photo {prob:.0%} likely AI-generated ({models_agree} of {models_total} detectors individually agree)."
+IMG-AI-00:
+  group: ai_detector
+  title: Detectors rate image as camera-captured
+  template: "AI-image detectors rate this photo as real (synthetic probability {prob:.0%})."
+IMG-AI-02:
+  group: ai_detector
+  title: Borderline AI-image evidence
+  template: "Calibrated AI-generation probability is {prob:.0%}, inside the borderline band; the image verdict is held as inconclusive rather than guessed."
+IMG-LOC-01:
+  group: local_anomaly
+  title: Localized synthetic region
+  template: "One region scores {tile_prob:.0%} synthetic while the whole image scores {global_prob:.0%}, consistent with a pasted or inpainted area (see heatmap)."
+IMG-ELA-01:
+  group: null   # measured: fires on 90% of genuine photos vs 75% of AI photos -> shown, not scored
+  title: Compression regions to inspect
+  template: "Error-level analysis highlights {regions} region(s) with a different compression history (peak z-score {zmax:.1f}); see the heatmap. Not scored: on real-world JPEGs it fires on most genuine photos."
+IMG-META-01:
+  group: exif_software
+  title: Editing software in metadata
+  template: "Image metadata names editing software: '{software}'."
+IMG-META-02:
+  group: exif_timeline
+  title: Photo taken outside the incident window
+  template: "Camera timestamp {taken} is {days} days {direction} the reported accident date."
+IMG-META-03:
+  group: gen_metadata
+  title: Generator signature in metadata
+  template: "File metadata contains an AI-generator signature: '{marker}'."
+IMG-Q-01:
+  group: null
+  title: Low-quality input
+  template: "Image quality is limited ({issues}); confidence in image checks is reduced to {reliability:.0%}."
+IMG-XCHK-01:
+  group: cross_document
+  title: Number plate differs from documents
+  template: "Plate read in the photo ({plate}) does not match the vehicle number on the documents ({doc_plate})."
+
+DOC-FONT-01:
+  group: doc_font
+  title: Font change inside a field
+  template: "'{text}' on page {page} uses font {font} ({size:.1f}pt) while the rest of the line uses {base_font} ({base_size:.1f}pt)."
+DOC-FONT-02:
+  group: doc_font
+  title: Character height inconsistent
+  template: "'{text}' is rendered {ratio:.0%} the height of neighbouring text on the same line (scanned/photographed document)."
+DOC-META-01:
+  group: doc_structure
+  title: Document modified after creation
+  template: "PDF was modified {days} day(s) after it was created (producer: '{producer}')."
+DOC-META-02:
+  group: doc_structure
+  title: Incremental edits appended to PDF
+  template: "The PDF contains {revisions} saved revisions; content was changed after the original was produced."
+DOC-META-03:
+  group: doc_editor
+  title: Editing tool in PDF metadata
+  template: "PDF metadata names an editing tool: '{tool}'."
+DOC-OVL-01:
+  group: doc_overlay
+  title: Text placed over a cover-up box
+  template: "'{text}' on page {page} is drawn on top of a filled box that hides the original content."
+DOC-OVL-02:
+  group: doc_overlay
+  title: Hidden text under visible text
+  template: "Page {page} contains overlapping text runs: '{hidden}' lies underneath '{visible}'."
+DOC-MATH-01:
+  group: doc_math
+  title: Totals do not add up
+  template: "{label}: the figures add up to ₹{expected:,.2f} but the document states ₹{stated:,.2f} (difference ₹{diff:,.2f})."
+DOC-ANOM-01:
+  group: doc_anomaly
+  title: Statistically unusual invoice
+  template: "Invoice profile is an outlier versus genuine repair invoices (anomaly score {score:.2f}); unusual on: {features}."
+DOC-IMG-01:   # reserved: not emitted (ELA on document scans did not separate genuine from forged)
+  group: doc_image_edit
+  title: Locally edited document image
+  template: "Error-level analysis finds {regions} locally re-compressed region(s) on this document image, typical of pasted numbers or text."
+DOC-XCHK-01:
+  group: cross_document
+  title: Vehicle number mismatch
+  template: "Vehicle numbers differ across documents: {values}."
+DOC-XCHK-02:
+  group: cross_document
+  title: Owner name mismatch
+  template: "Owner names differ across documents: {values}."
+DOC-XCHK-03:
+  group: cross_document
+  title: Invoice date inconsistent with accident
+  template: "Invoice dated {invoice_date} is {days} days {direction} the accident date {accident_date}."
+DOC-OK-00:
+  group: doc_structure
+  title: Document passed integrity checks
+  template: "No tampering traces found across {checks} checks ({passed})."
+DOC-DOM-00:
+  group: null
+  title: Outside the invoice domain
+  template: "No Indian GST invoice markers ({markers}) found, so the arithmetic and anomaly checks (tuned on GST invoices) were skipped for this document."
+DOC-Q-01:
+  group: null
+  title: Document text unreadable
+  template: "Too little text could be read from this document ({chars} characters); document checks are limited."
+
+ID-FACE-01:
+  group: identity
+  title: Selfie does not match licence photo
+  template: "Face similarity between licence and selfie is {similarity:.2f} (match ≥ {match_t:.2f})."
+ID-FACE-02:
+  group: identity
+  title: Face match uncertain
+  template: "Face similarity {similarity:.2f} is in the uncertain band; a manual identity check is needed."
+ID-FACE-00:
+  group: identity
+  title: Selfie matches licence photo
+  template: "Licence photo and selfie match (similarity {similarity:.2f})."
+ID-FACE-03:
+  group: null
+  title: No face found
+  template: "No usable face was found in {where}; identity comparison was skipped."
+
+XCLM-PHOTO-REUSE:
+  group: reuse
+  title: Photo reused from another claim
+  template: "This photo is a near-duplicate (distance {distance}) of a photo in claim {other_claim} filed {other_date}."
+XCLM-FACE-REUSE:
+  group: reuse
+  title: Same face in another claim
+  template: "The face here matches claim {other_claim} (similarity {similarity:.2f}) filed under the name '{other_name}'."
+XCLM-FILE-REUSE:   # shown as a note only: re-uploading the same file (testing, resubmission) must not raise the score
+  group: null
+  title: Same file analysed before
+  template: "This exact file (SHA-256 match) was already analysed in claim {other_claim}. Shown for information; not scored."
+
+SYS-FAIL-01:
+  group: null
+  title: Analyzer failed
+  template: "{analyzer} could not run ({error}); its evidence is missing and confidence is reduced."

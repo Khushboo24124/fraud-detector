@@ -1,0 +1,32 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+
+# Runtime data (created when the app runs)
+data/blobs/
+data/claimguard.db
+
+# Big model files (download with: python scripts/download_models.py)
+data/models/hf/
+data/models/*.onnx
+
+# Downloaded Kaggle datasets and samples (too big, own licenses)
+data/raw/*
+!data/raw/faces/
+!data/raw/faces_real/
+data/external/
+
+# Editor / OS / secrets
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+.streamlit/secrets.toml
+.env
+
+# Old copies / archives (not part of the code)
+/claimguard/
+*.zip

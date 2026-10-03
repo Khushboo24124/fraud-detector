@@ -1,0 +1,102 @@
+# ClaimGuard runtime configuration. Decision logic lives here, not in code.
+
+models:
+  # Pinned revisions: a model update can never silently change scores.
+  community_forensics:
+    repo: buildborderless/CommunityForensics-DeepfakeDet-ViT
+    revision: ac6ee457bea904a373065754107451793b56db00
+  siglip_ai_vs_human:
+    repo: Ateeqq/ai-vs-human-image-detector
+    revision: 60e82406916921b823616bee33397baab38af3f0
+  face_detector:
+    url: https://github.com/opencv/opencv_zoo/raw/main/models/face_detection_yunet/face_detection_yunet_2023mar.onnx
+    file: face_detection_yunet_2023mar.onnx
+  face_recognizer:
+    url: https://github.com/opencv/opencv_zoo/raw/main/models/face_recognition_sface/face_recognition_sface_2021dec.onnx
+    file: face_recognition_sface_2021dec.onnx
+
+limits:
+  max_file_mb: 20
+  max_files_per_claim: 12
+  max_pdf_pages: 10
+  max_image_pixels: 40000000   # decompression-bomb guard
+
+quality:
+  min_side_px: 256          # below this, image evidence is unreliable
+  blur_laplacian_min: 40.0  # variance of Laplacian
+  jpeg_quality_low: 60      # estimated quality below this = heavily recompressed
+
+risk:
+  prior_logit: -1.5         # base rate ~18% before any evidence
+  prob_clip: [0.03, 0.97]   # no single signal may be infinitely certain
+  tiers:                    # applied to overall fraud likelihood
+    medium: 0.35
+    high: 0.65
+  inconclusive:
+    detector_spread: 0.40   # ensemble members disagree by more than this
+    min_reliability: 0.35   # all evidence below this reliability
+  # Weight per signal group. Correlated signals share a group and are pooled
+  # (strongest kept) so they are never double counted.
+  group_weights:
+    ai_detector: 1.0
+    gen_metadata: 1.6
+    local_anomaly: 0.6
+    compression: 0.5
+    exif_software: 0.7
+    exif_timeline: 0.6
+    doc_font: 1.0
+    doc_structure: 0.7
+    doc_editor: 0.7           # independent of timeline: who touched the file vs when
+    doc_overlay: 1.2
+    doc_math: 1.1
+    doc_anomaly: 0.6
+    doc_image_edit: 0.6
+    cross_document: 1.0
+    identity: 1.2
+    reuse: 1.5
+  # Hard rules: findings so specific that they set a minimum tier regardless of score.
+  overrides:
+    IMG-META-03: HIGH        # generator signature embedded in the file
+    XCLM-PHOTO-REUSE: HIGH   # same damage photo used in another claim
+    XCLM-FACE-REUSE: HIGH    # same face under a different claimant name
+    DOC-OVL-01: MEDIUM       # cover-up box with replacement text
+    ID-FACE-01: HIGH         # selfie is clearly a different person from the licence photo;
+                             # a real-looking selfie must not cancel this out
+  domains:                  # which groups feed which domain score
+    image: [ai_detector, gen_metadata, local_anomaly, compression, exif_software, exif_timeline]
+    document: [doc_font, doc_structure, doc_editor, doc_overlay, doc_math, doc_anomaly, doc_image_edit, cross_document]
+    identity: [identity, reuse]
+
+thresholds:
+  # ONE AI-image threshold, used by the analyzer, the evaluation report and the README.
+  # Calibrated P(AI) >= ai_flag -> flagged; [ai_borderline, ai_flag) -> held as inconclusive.
+  ai_flag: 0.65
+  ai_borderline: 0.40
+  # Tile scan for partial edits. Measured on 40 AI-patch splices vs 40 real photos: it fired
+  # equally often on both (35% vs 35%), so it is disabled until a localization model replaces it.
+  tile_scan_enabled: false
+  tile_logit_gap: 3.0       # tile log-odds minus whole-image log-odds
+  tile_min_prob: 0.05
+  ela_zscore: 3.0
+  face_match: 0.45          # SFace cosine >= this: same person
+  face_mismatch: 0.30       # < this: different person; between = needs manual check
+  face_reuse: 0.50
+  phash_reuse: 8            # Hamming distance (64-bit pHash)
+  name_similarity: 0.80
+
+# AI-image detection runs with a profile per kind of photo. Measured on faces, the SigLIP
+# detector rates most *real* portraits as AI (AUC 0.58), so selfies use CommunityForensics only,
+# with their own calibrator (scripts/train_image_calibrator.py --profile face).
+ai_profiles:
+  scene:                    # damage photos
+    detectors: [community_forensics, siglip_ai_vs_human]
+    calibrator: image_calibrator.joblib
+    real_weight: 1          # classes weighted equally
+  face:                     # selfies / portrait photos
+    detectors: [community_forensics]
+    calibrator: face_calibrator.joblib
+    # Genuine selfies vastly outnumber deepfakes, so the calibrator weights real faces 2x.
+    # Measured (grouped CV): at 1x, 12% of real selfies were flagged; at 2x, 4%.
+    real_weight: 2
+
+domain_rules: config/domain_vehicle.yaml

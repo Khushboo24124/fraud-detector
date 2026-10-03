@@ -1,0 +1,19 @@
+Loading weights:   0%|          | 0/200 [00:00<?, ?it/s]Loading weights:  10%|▉         | 19/200 [00:00<00:00, 187.11it/s]Loading weights:  19%|█▉        | 38/200 [00:00<00:00, 174.87it/s]Loading weights: 100%|██████████| 200/200 [00:00<00:00, 764.07it/s]
+[transformers] Model config: bos_token_id must be `None` or an integer within the vocabulary (between 0 and 31999), got 49406. This may result in unexpected behavior.
+[transformers] Model config: eos_token_id must be `None` or an integer within the vocabulary (between 0 and 31999), got 49407. This may result in unexpected behavior.
+Loading weights:   0%|          | 0/210 [00:00<?, ?it/s]Loading weights:   5%|▍         | 10/210 [00:00<00:02, 93.32it/s]Loading weights:  10%|▉         | 20/210 [00:00<00:02, 64.35it/s]Loading weights:  13%|█▎        | 27/210 [00:00<00:03, 52.68it/s]Loading weights:  16%|█▌        | 33/210 [00:00<00:04, 41.12it/s]Loading weights:  19%|█▉        | 40/210 [00:00<00:03, 47.46it/s]Loading weights:  22%|██▏       | 47/210 [00:00<00:03, 48.22it/s]Loading weights:  25%|██▌     images 608/1750  (635s)
+  images 808/1750  (891s)
+  images 1008/1750  (1127s)
+  images 1208/1750  (1358s)
+  images 1408/1750  (1614s)
+  images 1608/1750  (1894s)
+wrote 1750 rows -> reports/external_images.csv
+  images 208/1750  (281s)
+  images 408/1750  (543s)
+  images 608/1750  (790s)
+  images 808/1750  (1036s)
+  images 1008/1750  (1292s)
+  images 1208/1750  (1520s)
+  images 1408/1750  (1743s)
+  images 1608/1750  (2057s)
+wrote 1750 rows -> reports/external_images.csv
