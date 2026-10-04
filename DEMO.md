@@ -2,7 +2,7 @@
 
 Before going on stage:
 ```bash
-streamlit run app.py      # warm the models: run demo claim 1 once, then Claim history → Clear history
+streamlit run app.py      # warm the models: run demo claim 1 once, then on the Analyze page click 🗑 Clear history → Yes, clear everything
 # Demo 3 needs demo 1 to have run first (it reuses claim 1's photo). Demos 4-5 use public example
 # faces: for the stage, put a teammate's photos in data/raw/faces/ and run scripts/make_demo_claims.py.
 ```

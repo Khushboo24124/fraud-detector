@@ -22,13 +22,19 @@ class Role(str, Enum):
     INVOICE = "invoice"
     RC = "rc"
     LICENCE = "licence"
+    ID_CARD = "id_card"          # any photo ID: Aadhaar, PAN, voter ID, passport
     SELFIE = "selfie"
     CLAIM_FORM = "claim_form"
     OTHER_DOC = "other_doc"
 
     @property
     def is_document(self) -> bool:
-        return self in {Role.INVOICE, Role.RC, Role.LICENCE, Role.CLAIM_FORM, Role.OTHER_DOC}
+        return self in {Role.INVOICE, Role.RC, Role.LICENCE, Role.ID_CARD, Role.CLAIM_FORM, Role.OTHER_DOC}
+
+    @property
+    def is_identity(self) -> bool:
+        """Documents whose face photo can be matched against the selfie."""
+        return self in {Role.LICENCE, Role.ID_CARD}
 
 
 class Tier(str, Enum):

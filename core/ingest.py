@@ -65,6 +65,8 @@ def guess_role(filename: str, kind: Kind) -> Role:
     hints = [
         (("selfie",), Role.SELFIE),
         (("licen", "dl_", "dl-", "driving"), Role.LICENCE),
+        (("aadhaar", "aadhar", "pan_card", "pancard", "pan-card", "voter", "id_card", "idcard", "id-card",
+          "identity", "passport"), Role.ID_CARD),
         (("rc_", "rc-", "registration"), Role.RC),
         (("invoice", "bill", "estimate", "receipt"), Role.INVOICE),
         (("claim_form", "claimform", "intimation"), Role.CLAIM_FORM),

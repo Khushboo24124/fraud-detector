@@ -90,9 +90,16 @@ class IdentityAnalyzer(ClaimAnalyzer):
 
     def analyze_claim(self, ctx: Context):
         th = settings()["thresholds"]
-        ids = [i for i in ctx.items if i.role is Role.LICENCE]
         selfies = [i for i in ctx.items if i.role is Role.SELFIE]
-        if not ids or not selfies:
+        if not selfies:
+            return []
+        # Any photo ID counts: driving licence first, then other ID cards (Aadhaar, PAN, voter ID...),
+        # then, as a fallback, any other document image that shows a face.
+        ids = sorted((i for i in ctx.items if i.role.is_identity), key=lambda i: i.role is not Role.LICENCE)
+        if not ids:
+            ids = [i for i in ctx.items if i.role.is_document and i.kind is Kind.IMAGE
+                   and self.best_face(ctx, i) is not None]
+        if not ids:
             return []
         id_item, selfie = ids[0], selfies[0]
         f_id, f_self = self.best_face(ctx, id_item), self.best_face(ctx, selfie)
@@ -102,7 +109,8 @@ class IdentityAnalyzer(ClaimAnalyzer):
 
         sim = float(np.dot(f_id["embedding"], f_self["embedding"]))
         rel = min(id_item.reliability, selfie.reliability)
-        ev = dict(similarity=sim, match_t=th["face_match"], id_item=id_item.id, selfie_item=selfie.id)
+        ev = dict(similarity=sim, match_t=th["face_match"], id_item=id_item.id, selfie_item=selfie.id,
+                  id_file=id_item.filename)
         save_artifact(id_item, "face", f_id["crop"])
         save_artifact(selfie, "face", f_self["crop"])
         if sim >= th["face_match"]:
@@ -123,9 +131,7 @@ class ReuseAnalyzer(ClaimAnalyzer):
         for item in ctx.items:
             hit = store.find_file(item.sha256, ctx.claim_id)
             if hit:
-                # Exact same bytes: usually a re-upload of the same claim or a test run, so it is a note,
-                # not evidence. Near-duplicates (cropped / recompressed copies) are still scored below.
-                out.append(self.signal(item, "XCLM-FILE-REUSE", None, 1.0, other_claim=hit["claim_id"]))
+                out.append(self.signal(item, "XCLM-FILE-REUSE", 0.92, 1.0, other_claim=hit["claim_id"]))
                 continue
             if item.role is Role.DAMAGE_PHOTO and item.kind is Kind.IMAGE:
                 h = int(str(imagehash.phash(ctx.image(item))), 16)
@@ -134,7 +140,7 @@ class ReuseAnalyzer(ClaimAnalyzer):
                 if near and near[0] <= th["phash_reuse"]:
                     out.append(self.signal(item, "XCLM-PHOTO-REUSE", 0.9, 1.0, distance=near[0],
                                            other_claim=near[1], other_date=near[2][:10]))
-            if item.role in (Role.SELFIE, Role.LICENCE):
+            if item.role is Role.SELFIE or item.role.is_identity:
                 face = ctx.slot(item).get("faces")
                 if face:
                     emb = face[0]["embedding"]

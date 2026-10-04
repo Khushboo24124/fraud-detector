@@ -5,6 +5,8 @@ document_types:
   invoice: ["invoice", "tax invoice", "repair bill", "estimate", "garage", "workshop", "service centre"]
   rc: ["registration certificate", "certificate of registration", "regn. no", "chassis no", "engine no"]
   licence: ["driving licence", "driving license", "dl no", "licence no", "valid till"]
+  id_card: ["aadhaar", "aadhar", "unique identification", "income tax department", "permanent account number",
+            "election commission", "elector", "voter", "passport", "identity card"]
   claim_form: ["claim form", "claim intimation", "policy no", "date of accident"]
 
 fields:

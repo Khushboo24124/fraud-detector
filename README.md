@@ -45,6 +45,14 @@ Tests: `python -m pytest -q`. Accuracy report: `python scripts/eval.py`, which w
 | Identity (bonus) | OpenCV **YuNet + SFace** face match, licence vs selfie, with an uncertain band; a clear mismatch is HIGH by rule. A deepfake selfie is caught by the AI-image check above | `ID-FACE-*` |
 | Cross-claim reuse | SHA-256, perceptual hash and face embeddings in SQLite | `XCLM-*` |
 
+## Web app
+
+`streamlit run app.py` opens the website: a home page, four menus (Technology, Solutions, Resources,
+About) and a step-by-step **Analyze a claim** page (details → upload → run → verdict → evidence).
+UI code lives in `ui/` (`theme.py` holds all colours and CSS). Numbers shown on the site are read
+live from `reports/` and `data/models/`, so the UI always matches the evaluation. To change the
+pictures, replace `assets/hero_placeholder.png` and `assets/inspection_placeholder.jpg`.
+
 ## Architecture
 
 ```

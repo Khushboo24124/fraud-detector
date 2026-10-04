@@ -140,3 +140,31 @@ def test_flagged_selfie_alone_is_high_risk():
     sel = [EvidenceItem("a", "selfie.jpg", Kind.IMAGE, Role.SELFIE, "x" * 64, "p")]
     _, overall, tier, _, _, _ = risk.assess([sig("IMG-AI-01", 0.97, prob=0.97, models_agree=1, models_total=1)], sel)
     assert tier is Tier.HIGH
+
+
+# ---------------------------------------------------------------- UI wiring (no dead menu links)
+def test_every_menu_link_has_a_page():
+    from ui import nav, pages_about, pages_resources, pages_solutions, pages_tech
+    pages = {**pages_tech.PAGES, **pages_solutions.PAGES, **pages_resources.PAGES, **pages_about.PAGES}
+    linked = {pid for items in nav.MENUS.values() for pid, _, _ in items}
+    assert linked == set(pages)
+
+
+def test_ui_report_roundtrip_keeps_scores():
+    from ui.report_io import from_dict
+    from core.schemas import ClaimInfo, ClaimReport, DomainScore
+    sigs = [sig("IMG-AI-01", 0.95, prob=0.95, models_agree=2, models_total=2)]
+    domains, overall, tier, reasons, why, overrides = risk.assess(sigs, items())
+    rep = ClaimReport("CLM-T", "2026-01-01T00:00:00", ClaimInfo(), items(), sigs, domains, overall, tier, reasons,
+                      "s", why, overrides)
+    back = from_dict(rep.to_dict())
+    assert back.tier is rep.tier and back.overall_risk == rep.overall_risk
+    assert [r.code for r in back.reasons] == [r.code for r in rep.reasons]
+
+
+def test_any_photo_id_counts_as_identity_document():
+    from core.ingest import guess_role
+    for name in ("aadhaar_front.jpg", "PAN-card.png", "voter_id.jpg", "passport.jpg"):
+        assert guess_role(name, Kind.IMAGE) is Role.ID_CARD
+    assert Role.ID_CARD.is_identity and Role.LICENCE.is_identity and Role.ID_CARD.is_document
+    assert not Role.SELFIE.is_identity

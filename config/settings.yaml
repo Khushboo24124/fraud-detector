@@ -57,6 +57,7 @@ risk:
   # Hard rules: findings so specific that they set a minimum tier regardless of score.
   overrides:
     IMG-META-03: HIGH        # generator signature embedded in the file
+    XCLM-FILE-REUSE: HIGH    # identical file already used in another claim
     XCLM-PHOTO-REUSE: HIGH   # same damage photo used in another claim
     XCLM-FACE-REUSE: HIGH    # same face under a different claimant name
     DOC-OVL-01: MEDIUM       # cover-up box with replacement text

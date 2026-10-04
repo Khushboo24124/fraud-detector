@@ -109,16 +109,16 @@ DOC-Q-01:
 
 ID-FACE-01:
   group: identity
-  title: Selfie does not match licence photo
-  template: "Face similarity between licence and selfie is {similarity:.2f} (match ≥ {match_t:.2f})."
+  title: Selfie does not match ID photo
+  template: "Face similarity between the ID photo ({id_file}) and the selfie is {similarity:.2f} (match ≥ {match_t:.2f})."
 ID-FACE-02:
   group: identity
   title: Face match uncertain
   template: "Face similarity {similarity:.2f} is in the uncertain band; a manual identity check is needed."
 ID-FACE-00:
   group: identity
-  title: Selfie matches licence photo
-  template: "Licence photo and selfie match (similarity {similarity:.2f})."
+  title: Selfie matches ID photo
+  template: "ID photo ({id_file}) and selfie match (similarity {similarity:.2f})."
 ID-FACE-03:
   group: null
   title: No face found
@@ -132,10 +132,10 @@ XCLM-FACE-REUSE:
   group: reuse
   title: Same face in another claim
   template: "The face here matches claim {other_claim} (similarity {similarity:.2f}) filed under the name '{other_name}'."
-XCLM-FILE-REUSE:   # shown as a note only: re-uploading the same file (testing, resubmission) must not raise the score
-  group: null
-  title: Same file analysed before
-  template: "This exact file (SHA-256 match) was already analysed in claim {other_claim}. Shown for information; not scored."
+XCLM-FILE-REUSE:
+  group: reuse
+  title: Identical file already submitted
+  template: "This exact file (SHA-256 match) was already submitted in claim {other_claim}."
 
 SYS-FAIL-01:
   group: null

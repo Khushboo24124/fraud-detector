@@ -17,7 +17,8 @@ from .base import Analyzer, Context
 EDIT_TOOLS = ["ilovepdf", "smallpdf", "sejda", "pdfescape", "pdf-xchange", "phantompdf", "sodapdf",
               "pdffiller", "dochub", "pdf editor", "pdfelement", "canva", "photoshop", "nitro pro",
               "online2pdf", "pdf24", "foxit pdf editor", "inkscape", "libreoffice draw"]
-ROLE_BY_TYPE = {"invoice": Role.INVOICE, "rc": Role.RC, "licence": Role.LICENCE, "claim_form": Role.CLAIM_FORM}
+ROLE_BY_TYPE = {"invoice": Role.INVOICE, "rc": Role.RC, "licence": Role.LICENCE, "id_card": Role.ID_CARD,
+                "claim_form": Role.CLAIM_FORM}
 IFOREST_PATH = MODEL_DIR / "invoice_iforest.joblib"
 
 
